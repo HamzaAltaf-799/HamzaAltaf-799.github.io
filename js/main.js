@@ -1,54 +1,49 @@
-(function () {
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach((e, i) => {
-      if (e.isIntersecting) {
-        setTimeout(() => e.target.classList.add('up'), i * 70);
-        obs.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.07 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+Main · JS
+document.addEventListener("DOMContentLoaded", () => {
+  const body = document.body;
+ 
 
-  const secs = document.querySelectorAll('section[id]');
-  const links = document.querySelectorAll('nav a[href^="#"]');
-  window.addEventListener('scroll', () => {
-    let cur = '';
-    secs.forEach(s => { if (window.scrollY >= s.offsetTop - 100) cur = s.id; });
-    links.forEach(a => { a.style.color = a.getAttribute('href') === '#' + cur ? 'var(--accent)' : ''; });
+  const themeToggle = document.querySelector("[data-theme-toggle]");
+  const themeStorageKey = "portfolio-theme";
+ 
+  
+  const setTheme = (theme) => {
+    const selectedTheme = theme === "dark" ? "dark" : "light";
+    body.dataset.theme = selectedTheme;
+    try { window.localStorage.setItem(themeStorageKey, selectedTheme); } catch { /* Theme still works when storage is unavailable. */ }
+    themeToggle?.setAttribute("aria-pressed", String(selectedTheme === "light"));
+  };
+ 
+  let storedTheme = null;
+  try { storedTheme = window.localStorage.getItem(themeStorageKey); } catch { /* Default to the light Apple canvas. */ }
+  setTheme(storedTheme);
+  themeToggle?.addEventListener("click", () => setTheme(body.dataset.theme === "light" ? "dark" : "light"));
+ 
+  /* Highlight the nav link for the section on screen (styled by .nav-links a.active) */
+  const nav = document.querySelector(".nav");
+  const sections = document.querySelectorAll("main section[id]");
+  const navLinks = document.querySelectorAll(".nav-links a[href^='#']");
+ 
+  const updateActiveLink = () => {
+    // The nav is sticky and gets taller on small screens, so measure it each time.
+    const offset = (nav?.offsetHeight || 64) + 24;
+    let current = "";
+    sections.forEach((section) => {
+      if (window.scrollY >= section.offsetTop - offset) current = section.id;
+    });
+    navLinks.forEach((link) => {
+      const isActive = link.getAttribute("href") === `#${current}`;
+      link.classList.toggle("active", isActive);
+      if (isActive) link.setAttribute("aria-current", "true");
+      else link.removeAttribute("aria-current");
+    });
+  };
+ 
+  let ticking = false;
+  window.addEventListener("scroll", () => {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(() => { updateActiveLink(); ticking = false; });
   }, { passive: true });
-
-  document.querySelectorAll('.btn-primary, .btn-ghost, .btn-light, .btn-sm').forEach(btn => {
-    btn.addEventListener('mousemove', e => {
-      const r = btn.getBoundingClientRect();
-      const x = e.clientX - r.left - r.width / 2;
-      const y = e.clientY - r.top - r.height / 2;
-      btn.style.transform = `translate(${x * 0.14}px, ${y * 0.14}px) translateY(-2px)`;
-    });
-    btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
-  });
-
-  document.querySelectorAll('.cert-card').forEach(card => {
-    card.addEventListener('mousemove', e => {
-      const r = card.getBoundingClientRect();
-      const x = (e.clientX - r.left) / r.width - 0.5;
-      const y = (e.clientY - r.top) / r.height - 0.5;
-      card.style.transform = `translateY(-4px) rotateX(${-y * 4}deg) rotateY(${x * 4}deg)`;
-    });
-    card.addEventListener('mouseleave', () => { card.style.transform = ''; });
-  });
-
-  const navToggle = document.getElementById('navToggle');
-  const navMobile = document.getElementById('navMobile');
-  if (navToggle && navMobile) {
-    navToggle.addEventListener('click', () => {
-      const isOpen = navMobile.classList.toggle('open');
-      navToggle.setAttribute('aria-expanded', String(isOpen));
-    });
-    navMobile.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        navMobile.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-  }
-})();
+  updateActiveLink();
+});
