@@ -5,287 +5,282 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Hamza Altaf — Computer Science (Cybersecurity) Student &amp; Backend Developer</title>
 <meta name="description" content="Portfolio of Hamza Altaf, a final-year Computer Science (Cybersecurity) student at Brunel University London seeking a graduate software engineering role. Backend development, secure systems, and Agile delivery."/>
-<meta name="theme-color" content="#12151a"/>
+<meta name="theme-color" content="#000000"/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="Hamza Altaf — Computer Science (Cybersecurity) Student &amp; Backend Developer"/>
 <meta property="og:description" content="Portfolio of Hamza Altaf, a final-year Computer Science (Cybersecurity) student at Brunel University London seeking a graduate role."/>
-<meta property="og:image" content="assets/profile.jpg"/>
+<meta property="og:image" content="https://hamzaaltaf-799.github.io/assets/profile.jpg"/>
 <meta name="twitter:card" content="summary"/>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="css/style.css"/>
 </head>
-<body>
+<body data-theme="light">
+<script>
+  /* Apply the saved theme before the page paints, so dark-mode visitors do not see a light flash. */
+  try { if (localStorage.getItem("portfolio-theme") === "dark") document.body.dataset.theme = "dark"; } catch (e) {}
+</script>
 <a href="#main" class="skip-link">Skip to content</a>
 
-<nav>
-<a href="#" class="nav-logo">HAMZA ALTAF</a>
-<ul class="nav-links">
-<li><a href="#about">About</a></li>
-<li><a href="#experience">Experience</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#certifications">Certs</a></li>
-<li><a href="#cv">CV</a></li>
-</ul>
-<a href="#contact" class="nav-cta">Contact</a>
-<button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMobile">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-</button>
+<nav class="nav" aria-label="Main">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Hamza Altaf</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#cv">CV</a>
+    </div>
+    <div class="nav-actions">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Light mode" aria-pressed="true">
+        <span class="theme-toggle-track"><span class="theme-toggle-thumb"></span></span>
+        <span class="theme-toggle-label">Light mode</span>
+      </button>
+      <a href="#contact" class="primary-btn primary-btn-sm nav-cta">Contact</a>
+    </div>
+  </div>
 </nav>
-<div class="nav-mobile" id="navMobile">
-<a href="#about">About</a>
-<a href="#experience">Experience</a>
-<a href="#projects">Projects</a>
-<a href="#certifications">Certifications</a>
-<a href="#cv">CV</a>
-<a href="#contact">Contact</a>
-</div>
 
 <main id="main">
-<section id="hero">
-<div class="hero-inner">
-<div class="hero-left reveal">
-<div class="hero-badge">Available · Jun 2026</div>
-<h1 class="hero-name">Hamza<br><span class="italic">Altaf</span></h1>
-<p class="hero-role">• BSc Computer Science (Cybersecurity) · Brunel University London</p>
-<p class="hero-desc">Backend-leaning developer building production-ready software with secure development principles from day one. Real projects, real stakeholders — not just coursework demos.</p>
-<div class="hero-actions">
-<a href="#projects" class="btn-primary"><span>View projects →</span></a>
-<a href="https://github.com/HamzaAltaf-799" target="_blank" rel="noopener" class="btn-ghost">GitHub ↗</a>
-<a href="assets/Hamza_CV.pdf" target="_blank" rel="noopener" class="btn-ghost">View CV ↗</a>
-</div>
-</div>
-<div class="hero-photo-wrap reveal" style="transition-delay:.1s">
-<div class="hero-photo-frame">
-<img src="assets/profile.jpg" alt="Portrait photo of Hamza Altaf, Computer Science student, in a dark suit" width="1000" height="1333"/>
-<div class="hero-photo-tag">
-<span class="t-k">Status</span>
-<span class="t-v">Open to graduate roles</span>
-</div>
-</div>
-<div class="hero-meta-strip">
-<div><span class="k">Based in</span><span class="v">Uxbridge, London</span></div>
-<div><span class="k">Focus</span><span class="v">Backend · Security</span></div>
-<div><span class="k">Window</span><span class="v">Jun '27 – Sep '28</span></div>
-</div>
-</div>
-</div>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <div>
+      <div class="hero-label">
+        <p class="hero-role">BSc Computer Science (Cybersecurity), Brunel University London</p>
+        <p class="hero-availability">Open to graduate roles from June 2027</p>
+      </div>
+      <h1 class="hero-title">Hamza Altaf</h1>
+      <p class="hero-subtitle">Backend-leaning developer building production-ready software with secure development principles from day one. Real projects, real stakeholders, not just coursework demos.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="primary-btn">View projects</a>
+        <a href="https://github.com/HamzaAltaf-799" target="_blank" rel="noopener" class="ghost-btn">GitHub</a>
+        <a href="assets/Hamza_CV.pdf" target="_blank" rel="noopener" class="ghost-btn">View CV</a>
+      </div>
+      <div class="hero-meta">
+        <div class="meta-item"><span class="meta-label">Based in</span><span class="meta-value">Uxbridge, London</span></div>
+        <div class="meta-item"><span class="meta-label">Focus</span><span class="meta-value">Backend and security</span></div>
+        <div class="meta-item"><span class="meta-label">Window</span><span class="meta-value">Jun 2027 – Sep 2028</span></div>
+      </div>
+    </div>
+    <div class="hero-image-frame">
+      <img class="hero-image" src="assets/profile.jpg" alt="Portrait photo of Hamza Altaf, Computer Science student, in a dark suit" width="1000" height="1333"/>
+    </div>
+  </div>
 </section>
 
-<div class="eyebrow-bar"><span class="eyebrow">01 — About</span><span class="eyebrow">Brunel University London</span></div>
-<section id="about">
-<div class="about-grid">
-<div>
-<p class="section-label reveal">Who I am</p>
-<h2 class="section-title reveal">Security-first<br><span class="italic">developer</span></h2>
-<div class="about-text reveal">
-<p>I am a <strong>Computer Science (Cybersecurity)</strong> student at Brunel University London, achieving <strong>First Class standing</strong> in Year 1. I build projects outside of coursework because I value the craft — the architecture decisions, the debugging process, the moment a system does something real.</p>
-<p>My background spans <strong>full-stack Java and JavaScript development</strong>, C for systems and security programming, real-time hardware integration, and applying secure development practices throughout the lifecycle. I have shipped production code during an internship, led a cross-functional team as Scrum Master, and built security tooling that goes beyond coursework.</p>
-<p>Currently studying <strong>Databases, Software Engineering, and Operating Systems &amp; Networks</strong>, and exploring <strong>Go fundamentals and distributed systems</strong> alongside my degree. Active daily user of AI coding tools. Looking for a graduate role where I can contribute meaningfully from day one.</p>
-</div>
-<div class="skills-section">
-<div class="skill-block reveal">
-<div class="skill-block-head">Software development</div>
-<div class="skill-block-body">
-<div class="skill-row"><span class="skill-key">Languages</span><div class="pill-row"><span class="pill hi">Java</span><span class="pill hi">JavaScript</span><span class="pill hi">SQL</span><span class="pill hi">C</span><span class="pill hi">Python</span><span class="pill">TypeScript</span><span class="pill">HTML/CSS</span></div></div>
-<div class="skill-row"><span class="skill-key">Frameworks</span><div class="pill-row"><span class="pill hi">React</span><span class="pill hi">REST APIs</span><span class="pill">Spring Boot</span><span class="pill">JDBC</span><span class="pill">SQLite/MySQL</span></div></div>
-<div class="skill-row"><span class="skill-key">Dev tools</span><div class="pill-row"><span class="pill">Git/GitHub</span><span class="pill">Jira</span><span class="pill">IntelliJ IDEA</span><span class="pill">VS Code</span><span class="pill">Agile/Scrum</span><span class="pill">CI/CD</span></div></div>
-<div class="skill-row"><span class="skill-key">AI tools</span><div class="pill-row"><span class="pill">Claude</span><span class="pill">GitHub Copilot</span></div></div>
-</div>
-</div>
-<div class="skill-block reveal">
-<div class="skill-block-head">Cybersecurity &amp; systems</div>
-<div class="skill-block-body">
-<div class="skill-row"><span class="skill-key">Secure dev</span><div class="pill-row"><span class="pill sec">Secure-by-Design</span><span class="pill sec">OWASP Principles</span><span class="pill sec">Input Validation</span><span class="pill sec">SQL Injection Prevention</span></div></div>
-<div class="skill-row"><span class="skill-key">Low-level</span><div class="pill-row"><span class="pill sec">Windows API</span><span class="pill sec">Win32 / NTAPI</span><span class="pill sec">PEB Internals</span><span class="pill sec">Anti-debugging</span><span class="pill sec">Sandbox Detection</span></div></div>
-<div class="skill-row"><span class="skill-key">Tools</span><div class="pill-row"><span class="pill sec">Semgrep (SAST)</span><span class="pill sec">Snyk</span><span class="pill sec">Wireshark</span></div></div>
-<div class="skill-row"><span class="skill-key">Concepts</span><div class="pill-row"><span class="pill">IAM</span><span class="pill">Threat Modelling</span><span class="pill">Cryptography</span><span class="pill">Network Security</span></div></div>
-</div>
-</div>
-</div>
-</div>
-<div class="about-sidebar">
-<div class="aside-avail reveal">
-<div class="avail-head">Open to graduate roles</div>
-<p>Seeking a graduate role in software engineering, cybersecurity, or backend development, across London and the wider UK.</p>
-</div>
-<div class="aside-learning reveal" style="transition-delay:.06s">
-<div class="lbl">Currently exploring</div>
-<p>Go fundamentals and distributed systems concepts, alongside coursework in Operating Systems &amp; Networks.</p>
-</div>
-<div class="aside-cv reveal" id="cv" style="transition-delay:.12s">
-<span class="lbl">CV</span>
-<div class="btns">
-<a href="assets/Hamza_CV.pdf" target="_blank" rel="noopener" class="btn-sm">View CV ↗</a>
-<a href="assets/Hamza_CV.pdf" download class="btn-sm">Download</a>
-</div>
-</div>
-</div>
-</div>
+<section class="section about-section" id="about">
+  <div class="container">
+    <div class="section-header">
+      <h2>Security-first developer</h2>
+    </div>
+    <div class="about-content">
+      <p>I am a Computer Science (Cybersecurity) student at Brunel University London, achieving First Class standing in Year 1. I build projects outside of coursework because I value the craft: the architecture decisions, the debugging process, the moment a system does something real.</p>
+    </div>
+  </div>
 </section>
 
-<div class="eyebrow-bar"><span class="eyebrow">02 — Experience</span><span class="eyebrow">Internship · Work</span></div>
-<section id="experience">
-<p class="section-label reveal">Where I have worked</p>
-<h2 class="section-title reveal">Real code,<br><span class="italic">real stakes</span></h2>
-<div class="exp-list reveal">
-<div class="exp-item">
-<div class="exp-header">
-<span class="exp-title">Software Developer Intern</span>
-<span class="exp-date">Jun – Jul 2025</span>
-</div>
-<div class="exp-org">Daska City Housing Scheme · Daska, Pakistan</div>
-<div class="exp-bullets">
-<p class="exp-bullet">Designed and developed the complete backend of a Real Estate Management Dashboard using Java, JDBC, and SQL — architecting the data layer from scratch and implementing end-to-end CRUD operations for a live production environment used by non-technical staff daily.</p>
-<p class="exp-bullet">Engineered relational SQL schemas with attention to normalisation, join performance, and data integrity; wrote complex multi-table queries with null-safety handling and validation logic.</p>
-<p class="exp-bullet">Identified and resolved a critical pre-launch data integrity bug — a SQL JOIN silently returning incorrect results for records with null optional fields. Traced root cause through the JDBC layer, implemented a fix, and added regression test coverage.</p>
-<p class="exp-bullet">Worked across the full development lifecycle: requirements gathering with non-technical stakeholders, iterative Agile delivery, QA, deployment, and post-launch user training and documentation.</p>
-</div>
-</div>
-<div class="exp-item">
-<div class="exp-header">
-<span class="exp-title">Retail Assistant</span>
-<span class="exp-date">Current</span>
-</div>
-<div class="exp-org">John Lewis Partnership (Waitrose)</div>
-<div class="exp-bullets">
-<p class="exp-bullet">First point of contact for high-volume daily requests in a high-footfall environment: triage by urgency, resolve immediately where possible, escalate appropriately, keep all stakeholders informed.</p>
-</div>
-</div>
-</div>
+<section class="section" id="skills">
+  <div class="container">
+    <div class="section-header">
+      <h2>Background and skills</h2>
+      <p>My background spans full-stack Java and JavaScript development, C for systems and security programming, real-time hardware integration, and applying secure development practices throughout the lifecycle. I have shipped production code during an internship, led a cross-functional team as Scrum Master, and built security tooling that goes beyond coursework.</p>
+    </div>
+    <div class="capabilities-grid stacked">
+      <div class="capability-section glass">
+        <h3>Software development</h3>
+        <div class="detail-item"><span class="detail-label">Languages</span><div class="capability-skills"><span class="skill">Java</span><span class="skill">JavaScript</span><span class="skill">SQL</span><span class="skill">C</span><span class="skill">Python</span><span class="skill">TypeScript</span><span class="skill">HTML/CSS</span></div></div>
+        <div class="detail-item"><span class="detail-label">Frameworks</span><div class="capability-skills"><span class="skill">React</span><span class="skill">REST APIs</span><span class="skill">Spring Boot</span><span class="skill">JDBC</span><span class="skill">SQLite/MySQL</span></div></div>
+        <div class="detail-item"><span class="detail-label">Dev tools</span><div class="capability-skills"><span class="skill">Git/GitHub</span><span class="skill">Jira</span><span class="skill">IntelliJ IDEA</span><span class="skill">VS Code</span><span class="skill">Agile/Scrum</span><span class="skill">CI/CD</span></div></div>
+        <div class="detail-item"><span class="detail-label">AI tools</span><div class="capability-skills"><span class="skill">Claude</span><span class="skill">GitHub Copilot</span></div></div>
+      </div>
+      <div class="capability-section glass">
+        <h3>Cybersecurity and systems</h3>
+        <div class="detail-item"><span class="detail-label">Secure development</span><div class="capability-skills"><span class="skill">Secure-by-Design</span><span class="skill">OWASP Principles</span><span class="skill">Input Validation</span><span class="skill">SQL Injection Prevention</span></div></div>
+        <div class="detail-item"><span class="detail-label">Low-level</span><div class="capability-skills"><span class="skill">Windows API</span><span class="skill">Win32 / NTAPI</span><span class="skill">PEB Internals</span><span class="skill">Anti-debugging</span><span class="skill">Sandbox Detection</span></div></div>
+        <div class="detail-item"><span class="detail-label">Tools</span><div class="capability-skills"><span class="skill">Semgrep (SAST)</span><span class="skill">Snyk</span><span class="skill">Wireshark</span></div></div>
+        <div class="detail-item"><span class="detail-label">Concepts</span><div class="capability-skills"><span class="skill">IAM</span><span class="skill">Threat Modelling</span><span class="skill">Cryptography</span><span class="skill">Network Security</span></div></div>
+      </div>
+      <div class="capability-card glass">
+        <h3>Currently studying</h3>
+        <p>Databases, Software Engineering, and Operating Systems &amp; Networks. Active daily user of AI coding tools.</p>
+      </div>
+      <div class="capability-card glass">
+        <h3>Currently exploring</h3>
+        <p>Go fundamentals and distributed systems concepts, alongside coursework in Operating Systems &amp; Networks.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<div class="eyebrow-bar"><span class="eyebrow">03 — Projects</span><span class="eyebrow">5 projects</span></div>
-<section id="projects">
-<p class="section-label reveal">Things I have built</p>
-<h2 class="section-title reveal">Real projects,<br><span class="italic">real stakeholders</span></h2>
-<div class="proj-list reveal">
-
-<div class="proj-item">
-<div class="proj-num">01</div>
-<div class="proj-content">
-<h3>win-sandbox-detector</h3>
-<div class="proj-meta">
-<span class="proj-date">May 2026 · Public · MIT</span>
-<a href="https://github.com/HamzaAltaf-799/win-sandbox-detector" target="_blank" rel="noopener" class="proj-link">github.com/HamzaAltaf-799/win-sandbox-detector ↗</a>
-</div>
-<p>Security PoC in C: timing attacks (RDTSC, Sleep() hook), environment fingerprinting (MAC OUI for VMware, VirtualBox, Hyper-V, Xen, QEMU; process list scanning), debugger detection (IsDebuggerPresent, NtQueryInformationProcess via dynamic GetProcAddress, PEB heap bits, hardware breakpoints), and human presence checks. Every technique documented with attacker rationale and defensive countermeasures.</p>
-<div class="proj-tags"><span class="ptag">C</span><span class="ptag">Windows API</span><span class="ptag">NTAPI</span><span class="ptag">Win32</span><span class="ptag">PEB Internals</span></div>
-</div>
-<div class="proj-side"><span class="proj-badge new">Security PoC</span><div class="proj-arrow">→</div></div>
-</div>
-
-<div class="proj-item">
-<div class="proj-num">02</div>
-<div class="proj-content">
-<h3>SafeCircle — Community Safety Platform</h3>
-<div class="proj-meta">
-<span class="proj-date">Oct 2025 – Present · Active</span>
-<a href="https://github.com/HamzaAltaf-799" target="_blank" rel="noopener" class="proj-link">github.com/HamzaAltaf-799 ↗</a>
-</div>
-<p>Production React and JavaScript platform serving real active users: multi-role authentication, priority-based alerting components, and real-time crisis assistance workflows. Led delivery as Scrum Master — Jira backlog, sprint ceremonies, code reviews, and retrospectives across a distributed cross-functional team.</p>
-<div class="proj-tags"><span class="ptag">React</span><span class="ptag">JavaScript</span><span class="ptag">Jira</span><span class="ptag">Agile</span></div>
-</div>
-<div class="proj-side"><span class="proj-badge">Web app</span><div class="proj-arrow">→</div></div>
-</div>
-
-<div class="proj-item">
-<div class="proj-num">03</div>
-<div class="proj-content">
-<h3>Real Estate Management Dashboard</h3>
-<div class="proj-meta"><span class="proj-date">Jun – Jul 2025 · Deployed · Internship</span></div>
-<p>Full-stack production system delivered end-to-end in a 2-month internship: relational schema design, complex SQL JOINs, null-safety, full CRUD in Java — live and used daily. Resolved a pre-launch data integrity bug: reproduced, root-caused, fixed, regression-tested, documented.</p>
-<div class="proj-tags"><span class="ptag">Java</span><span class="ptag">JDBC</span><span class="ptag">SQL</span><span class="ptag">OOP</span></div>
-</div>
-<div class="proj-side"><span class="proj-badge">Internship</span><div class="proj-arrow">→</div></div>
-</div>
-
-<div class="proj-item">
-<div class="proj-num">04</div>
-<div class="proj-content">
-<h3>SwiftBot Shape Detection System</h3>
-<div class="proj-meta"><span class="proj-date">May 2025 · Completed</span></div>
-<p>Java application integrating a physical hardware API for real-time shape detection and classification. Diagnosed hardware-software interface failures at the API boundary through systematic fault isolation. Live technical demonstration delivered with clear architecture documentation.</p>
-<div class="proj-tags"><span class="ptag">Java</span><span class="ptag">SwiftBot API</span><span class="ptag">Algorithms</span></div>
-</div>
-<div class="proj-side"><span class="proj-badge">Systems</span><div class="proj-arrow">→</div></div>
-</div>
-
-<div class="proj-item">
-<div class="proj-num">05</div>
-<div class="proj-content">
-<h3>Simon Swift — Pattern Recognition Game</h3>
-<div class="proj-meta"><span class="proj-date">Mar 2025 · Completed</span></div>
-<p>Scalable pattern recognition logic and adaptive difficulty algorithms using event-driven Java. Collaborated via GitHub with a branch-based workflow, structured peer code review, and commit conventions. Ran retrospectives and documented lessons learned throughout.</p>
-<div class="proj-tags"><span class="ptag">Java</span><span class="ptag">Event-Driven OOP</span><span class="ptag">GitHub</span></div>
-</div>
-<div class="proj-side"><span class="proj-badge">Hardware</span><div class="proj-arrow">→</div></div>
-</div>
-
-</div>
+<section class="section featured-work" id="experience">
+  <div class="container">
+    <div class="section-header">
+      <h2>Real code, real stakes</h2>
+      <p>Where I have worked.</p>
+    </div>
+    <div class="timeline">
+      <article class="timeline-item glass">
+        <div class="timeline-meta">
+          <h3>Software Developer Intern</h3>
+          <span class="company">Daska City Housing Scheme, Daska, Pakistan</span>
+          <span class="date">Jun – Jul 2025</span>
+        </div>
+        <ul class="timeline-details">
+          <li>Designed and developed the complete backend of a Real Estate Management Dashboard using Java, JDBC, and SQL, architecting the data layer from scratch and implementing end-to-end CRUD operations for a live production environment used by non-technical staff daily.</li>
+          <li>Engineered relational SQL schemas with attention to normalisation, join performance, and data integrity; wrote complex multi-table queries with null-safety handling and validation logic.</li>
+          <li>Identified and resolved a critical pre-launch data integrity bug: a SQL JOIN silently returning incorrect results for records with null optional fields. Traced root cause through the JDBC layer, implemented a fix, and added regression test coverage.</li>
+          <li>Worked across the full development lifecycle: requirements gathering with non-technical stakeholders, iterative Agile delivery, QA, deployment, and post-launch user training and documentation.</li>
+        </ul>
+      </article>
+      <article class="timeline-item glass">
+        <div class="timeline-meta">
+          <h3>Retail Assistant</h3>
+          <span class="company">John Lewis Partnership (Waitrose)</span>
+          <span class="date">Current</span>
+        </div>
+        <ul class="timeline-details">
+          <li>First point of contact for high-volume daily requests in a high-footfall environment: triage by urgency, resolve immediately where possible, escalate appropriately, keep all stakeholders informed.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
 </section>
 
-<div class="eyebrow-bar"><span class="eyebrow">04 — Certifications</span><span class="eyebrow">3 credentials</span></div>
-<section id="certifications">
-<p class="section-label reveal">Credentials</p>
-<h2 class="section-title reveal">Skills I have<br><span class="italic">formalised</span></h2>
-<div class="cert-grid">
+<section class="section" id="projects">
+  <div class="container">
+    <div class="section-header">
+      <h2>Real projects, real stakeholders</h2>
+      <p>Things I have built.</p>
+    </div>
+    <div class="featured-projects">
 
-<a href="https://www.coursera.org/professional-certificates/microsoft-cybersecurity-analyst" target="_blank" rel="noopener" class="cert-card reveal">
-<div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 9 4.6-.3 8-4 8-9V5l-8-3Z"/></svg></div>
-<div><div class="cert-issuer">Microsoft · Coursera</div><div class="cert-title">Microsoft Cybersecurity Analyst Professional Certificate</div></div>
-<p class="cert-desc">Threat intelligence, security operations, IAM, cloud security fundamentals, and applying security principles to enterprise environments.</p>
-<div class="cert-footer"><span class="cert-status progress">In progress</span><span class="cert-lnk">View ↗</span></div>
-</a>
+      <article class="project-showcase glass">
+        <div class="project-header">
+          <h3>win-sandbox-detector</h3>
+          <span class="project-status">Security PoC</span>
+        </div>
+        <p class="project-lead">Security PoC in C: timing attacks (RDTSC, Sleep() hook), environment fingerprinting (MAC OUI for VMware, VirtualBox, Hyper-V, Xen, QEMU; process list scanning), debugger detection (IsDebuggerPresent, NtQueryInformationProcess via dynamic GetProcAddress, PEB heap bits, hardware breakpoints), and human presence checks. Every technique documented with attacker rationale and defensive countermeasures.</p>
+        <div class="project-meta-grid">
+          <div class="detail-item"><span class="detail-label">Date</span><span class="detail-value">May 2026 · Public · MIT</span></div>
+          <div class="detail-item"><span class="detail-label">Repository</span><a class="detail-value" href="https://github.com/HamzaAltaf-799/win-sandbox-detector" target="_blank" rel="noopener">github.com/HamzaAltaf-799/win-sandbox-detector</a></div>
+        </div>
+        <div class="tech-list"><span class="tech-item">C</span><span class="tech-item">Windows API</span><span class="tech-item">NTAPI</span><span class="tech-item">Win32</span><span class="tech-item">PEB Internals</span></div>
+      </article>
 
-<a href="https://www.coursera.org/professional-certificates/java-developer" target="_blank" rel="noopener" class="cert-card reveal" style="transition-delay:.08s">
-<div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m8 3-3 3 3 3M16 3l3 3-3 3M11 3 9 21"/></svg></div>
-<div><div class="cert-issuer">IBM · Coursera</div><div class="cert-title">IBM Java Developer Professional Certificate</div></div>
-<p class="cert-desc">OOP, multithreading, Java Streams API, REST APIs with Spring Boot, SQL/JDBC, Maven, Git, and full-stack integration.</p>
-<div class="cert-footer"><span class="cert-status done">Completed</span><span class="cert-lnk">View ↗</span></div>
-</a>
+      <article class="project-showcase glass">
+        <div class="project-header">
+          <h3>SafeCircle — Community Safety Platform</h3>
+          <span class="project-status">Web app</span>
+        </div>
+        <p class="project-lead">Production React and JavaScript platform serving real active users: multi-role authentication, priority-based alerting components, and real-time crisis assistance workflows. Led delivery as Scrum Master: Jira backlog, sprint ceremonies, code reviews, and retrospectives across a distributed cross-functional team.</p>
+        <div class="project-meta-grid">
+          <div class="detail-item"><span class="detail-label">Date</span><span class="detail-value">Oct 2025 – Present · Active</span></div>
+          <div class="detail-item"><span class="detail-label">Repository</span><a class="detail-value" href="https://github.com/HamzaAltaf-799" target="_blank" rel="noopener">github.com/HamzaAltaf-799</a></div>
+        </div>
+        <div class="tech-list"><span class="tech-item">React</span><span class="tech-item">JavaScript</span><span class="tech-item">Jira</span><span class="tech-item">Agile</span></div>
+      </article>
 
-<a href="https://www.coursera.org/professional-certificates/google-project-management" target="_blank" rel="noopener" class="cert-card reveal" style="transition-delay:.16s">
-<div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11h6M9 15h6M5 4h14v16H5z"/></svg></div>
-<div><div class="cert-issuer">Google · Coursera</div><div class="cert-title">Agile Project Management Professional Certificate</div></div>
-<p class="cert-desc">Agile philosophy, Scrum theory, sprint planning, backlog refinement, value-driven delivery, and adapting Agile for dynamic environments.</p>
-<div class="cert-footer"><span class="cert-status done">Completed</span><span class="cert-lnk">View ↗</span></div>
-</a>
+      <article class="project-showcase glass">
+        <div class="project-header">
+          <h3>Real Estate Management Dashboard</h3>
+          <span class="project-status">Internship</span>
+        </div>
+        <p class="project-lead">Full-stack production system delivered end-to-end in a 2-month internship: relational schema design, complex SQL JOINs, null-safety, full CRUD in Java, live and used daily. Resolved a pre-launch data integrity bug: reproduced, root-caused, fixed, regression-tested, documented.</p>
+        <div class="project-meta-grid">
+          <div class="detail-item"><span class="detail-label">Date</span><span class="detail-value">Jun – Jul 2025</span></div>
+          <div class="detail-item"><span class="detail-label">Status</span><span class="detail-value">Deployed</span></div>
+        </div>
+        <div class="tech-list"><span class="tech-item">Java</span><span class="tech-item">JDBC</span><span class="tech-item">SQL</span><span class="tech-item">OOP</span></div>
+      </article>
 
-</div>
+      <article class="project-showcase glass">
+        <div class="project-header">
+          <h3>SwiftBot Shape Detection System</h3>
+          <span class="project-status">Systems</span>
+        </div>
+        <p class="project-lead">Java application integrating a physical hardware API for real-time shape detection and classification. Diagnosed hardware-software interface failures at the API boundary through systematic fault isolation. Live technical demonstration delivered with clear architecture documentation.</p>
+        <div class="project-meta-grid">
+          <div class="detail-item"><span class="detail-label">Date</span><span class="detail-value">May 2025</span></div>
+          <div class="detail-item"><span class="detail-label">Status</span><span class="detail-value">Completed</span></div>
+        </div>
+        <div class="tech-list"><span class="tech-item">Java</span><span class="tech-item">SwiftBot API</span><span class="tech-item">Algorithms</span></div>
+      </article>
+
+      <article class="project-showcase glass">
+        <div class="project-header">
+          <h3>Simon Swift — Pattern Recognition Game</h3>
+          <span class="project-status">Hardware</span>
+        </div>
+        <p class="project-lead">Scalable pattern recognition logic and adaptive difficulty algorithms using event-driven Java. Collaborated via GitHub with a branch-based workflow, structured peer code review, and commit conventions. Ran retrospectives and documented lessons learned throughout.</p>
+        <div class="project-meta-grid">
+          <div class="detail-item"><span class="detail-label">Date</span><span class="detail-value">Mar 2025</span></div>
+          <div class="detail-item"><span class="detail-label">Status</span><span class="detail-value">Completed</span></div>
+        </div>
+        <div class="tech-list"><span class="tech-item">Java</span><span class="tech-item">Event-Driven OOP</span><span class="tech-item">GitHub</span></div>
+      </article>
+
+    </div>
+  </div>
 </section>
 
-<div class="eyebrow-bar" style="background:var(--ink2);border-color:rgba(238,240,243,.08)"><span class="eyebrow" style="color:rgba(238,240,243,.35)">05 — Contact</span><span class="eyebrow" style="color:rgba(238,240,243,.35)">Open to graduate roles</span></div>
-<section id="contact">
-<div class="contact-grid">
-<div class="contact-left reveal">
-<p class="section-label" style="color:rgba(238,240,243,.35)">Get in touch</p>
-<h2 class="section-title">Get in<br><span class="italic">touch.</span></h2>
-<p>Looking for a graduate role where I can contribute from day one — not just as a junior developer, but as an engineer who ships real, <strong>secure</strong> features. Open to <strong>software engineering</strong>, <strong>cybersecurity</strong>, and <strong>backend development</strong> roles across London and the wider UK.</p>
-<a href="mailto:hamzaaltaf423@gmail.com" class="btn-light">Send an email →</a>
-</div>
-<div class="contact-right reveal" style="transition-delay:.1s">
-<div class="contact-links">
-<a href="mailto:hamzaaltaf423@gmail.com" class="contact-row"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4zM4 6l8 7 8-7"/></svg><div><div class="contact-info-lbl">Email</div><div class="contact-info-val">hamzaaltaf423@gmail.com</div></div></a>
-<a href="https://linkedin.com/in/-hamza-altaf-" target="_blank" rel="noopener" class="contact-row"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 9h3v11H4zM5.5 4a1.7 1.7 0 1 1 0 3.4A1.7 1.7 0 0 1 5.5 4ZM11 9h3v2c1-1.6 2.3-2.3 4-2.3 3 0 4 2 4 5.2V20h-3v-5.6c0-1.6-.6-2.7-2-2.7-1.1 0-1.8.8-2.1 1.5-.1.3-.1.6-.1 1V20h-3z"/></svg><div><div class="contact-info-lbl">LinkedIn</div><div class="contact-info-val">linkedin.com/in/-hamza-altaf-</div></div></a>
-<a href="https://github.com/HamzaAltaf-799" target="_blank" rel="noopener" class="contact-row"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 0 0-3.16 19.5c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.1.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.9-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.58 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .26.18.58.69.48A10 10 0 0 0 12 2Z"/></svg><div><div class="contact-info-lbl">GitHub</div><div class="contact-info-val">github.com/HamzaAltaf-799</div></div></a>
-<a href="https://hamzaaltaf-799.github.io" target="_blank" rel="noopener" class="contact-row"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg><div><div class="contact-info-lbl">Portfolio</div><div class="contact-info-val">hamzaaltaf-799.github.io</div></div></a>
-</div>
-<div class="contact-note">
-<p>Available from: <strong style="color:rgba(238,240,243,.85)">June 2027</strong>. Full UK right to work.</p>
-<a href="assets/Hamza_CV.pdf" download class="btn-light" style="font-size:.66rem;padding:.6rem 1.2rem">Download CV</a>
-</div>
-</div>
-</div>
+<section class="section featured-work" id="certifications">
+  <div class="container">
+    <div class="section-header">
+      <h2>Skills I have formalised</h2>
+      <p>Professional certificates.</p>
+    </div>
+    <div class="featured-grid">
+      <a href="https://www.coursera.org/professional-certificates/microsoft-cybersecurity-analyst" target="_blank" rel="noopener" class="featured-card glass">
+        <span class="card-badge">Microsoft · Coursera</span>
+        <h3>Microsoft Cybersecurity Analyst Professional Certificate</h3>
+        <p>Threat intelligence, security operations, IAM, cloud security fundamentals, and applying security principles to enterprise environments.</p>
+        <div class="card-details"><div class="detail-item"><span class="detail-label">Status</span><span class="detail-value">In progress</span></div></div>
+      </a>
+      <a href="https://www.coursera.org/professional-certificates/java-developer" target="_blank" rel="noopener" class="featured-card glass">
+        <span class="card-badge">IBM · Coursera</span>
+        <h3>IBM Java Developer Professional Certificate</h3>
+        <p>OOP, multithreading, Java Streams API, REST APIs with Spring Boot, SQL/JDBC, Maven, Git, and full-stack integration.</p>
+        <div class="card-details"><div class="detail-item"><span class="detail-label">Status</span><span class="detail-value">Completed</span></div></div>
+      </a>
+      <a href="https://www.coursera.org/professional-certificates/google-project-management" target="_blank" rel="noopener" class="featured-card glass">
+        <span class="card-badge">Google · Coursera</span>
+        <h3>Agile Project Management Professional Certificate</h3>
+        <p>Agile philosophy, Scrum theory, sprint planning, backlog refinement, value-driven delivery, and adapting Agile for dynamic environments.</p>
+        <div class="card-details"><div class="detail-item"><span class="detail-label">Status</span><span class="detail-value">Completed</span></div></div>
+      </a>
+    </div>
+  </div>
 </section>
+
+<section class="section" id="contact">
+  <div class="container">
+  <div class="contact-card glass">
+    <h2>Get in touch</h2>
+    <p>Looking for a graduate role where I can contribute from day one, not just as a junior developer, but as an engineer who ships real, secure features. Open to software engineering, cybersecurity, and backend development roles across London and the wider UK.</p>
+    <div class="contact-info">
+      <div class="info-item"><span class="info-label">Email</span><a href="mailto:hamzaaltaf423@gmail.com">hamzaaltaf423@gmail.com</a></div>
+      <div class="info-item"><span class="info-label">LinkedIn</span><a href="https://linkedin.com/in/-hamza-altaf-" target="_blank" rel="noopener">linkedin.com/in/-hamza-altaf-</a></div>
+      <div class="info-item"><span class="info-label">GitHub</span><a href="https://github.com/HamzaAltaf-799" target="_blank" rel="noopener">github.com/HamzaAltaf-799</a></div>
+      <div class="info-item"><span class="info-label">Availability</span><span class="detail-value">From June 2027. Full UK right to work.</span></div>
+    </div>
+    <div class="contact-actions" id="cv">
+      <a href="mailto:hamzaaltaf423@gmail.com" class="primary-btn">Send an email</a>
+      <a href="assets/Hamza_CV.pdf" target="_blank" rel="noopener" class="ghost-btn">View CV</a>
+      <a href="assets/Hamza_CV.pdf" download class="ghost-btn">Download CV</a>
+    </div>
+  </div>
+  </div>
+</section>
+
 </main>
 
-<footer>
-<span class="footer-l">© 2026 Hamza Altaf · Brunel University London</span>
-<span class="footer-r"><a href="https://github.com/HamzaAltaf-799" target="_blank" rel="noopener">GitHub</a> · <a href="https://linkedin.com/in/-hamza-altaf-" target="_blank" rel="noopener">LinkedIn</a></span>
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Hamza Altaf, Brunel University London · <a href="https://github.com/HamzaAltaf-799" target="_blank" rel="noopener">GitHub</a> · <a href="https://linkedin.com/in/-hamza-altaf-" target="_blank" rel="noopener">LinkedIn</a></p>
+  </div>
 </footer>
 
 <script src="js/main.js"></script>
 </body>
 </html>
-
